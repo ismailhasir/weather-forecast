@@ -20,16 +20,6 @@ interface Data{
   EnglishName: string;
 }
 
-
-// const fetchRegionList = async (): Promise<[]> => {
-//   const response = await fetch('http://dataservice.accuweather.com/locations/v1/regions?apikey=GE8xY3r4poA9t2423WBQYzLMJ75gnuTO&language=en-us');
-//   console.log(response)
-//   if (!response.ok) {
-//     throw new Error('Network response was not ok');
-//   }
-//   return response.json();
-// };
-
 const Regions = () => {
   const { data ,error, isLoading } = useQuery<Data[],Error>({queryKey:['regions'], queryFn:fetchRegionList});
                   
